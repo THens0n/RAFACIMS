@@ -19,12 +19,4 @@ Route::get('login', function () {
     ]);//+
 })->middleware('guest')->name('login');
 
-// Register route (GET)
-Route::get('register', [RegisteredUserController::class, 'create'])
-    ->middleware('guest')
-    ->name('register');
-
-Route::post('register', [RegisteredUserController::class, 'store'])
-    ->middleware('guest');
-
 require __DIR__.'/auth.php';
